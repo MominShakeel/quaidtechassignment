@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "479954056084",
+    "project_id": "quaidtech-52138",
+    "storage_bucket": "quaidtech-52138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479954056084:android:19a2a3bd1d7a43b83ad581",
+        "android_client_info": {
+          "package_name": "com.example.quaidtech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479954056084-pdk1t5fu8kb55e2e49echg8gm7jq54gc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quaidtech",
+            "certificate_hash": "53220e787028951bd29911a0bbae3c96e40abf24"
+          }
+        },
+        {
+          "client_id": "479954056084-5m8bqefaoeai64k66ksq4kmm0eb67201.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBpa85hEcWhuoI6RZrnBCz4fMBvOEvlqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479954056084-5m8bqefaoeai64k66ksq4kmm0eb67201.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
