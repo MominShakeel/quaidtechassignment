@@ -5,7 +5,19 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 
 class LoginAuthCubit extends Cubit<LoginAuthState>{
-  LoginAuthCubit():super(LoginAuthInitState());
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final auth = FirebaseAuth.instance;
+  LoginAuthCubit():super(LoginAuthInitState()){
+    User? currentUser = auth.currentUser!;
+
+    if(currentUser != null){
+      emit(LoginAuthLoggedInState(currentUser));
+    }
+    else{
+      emit(LoginAuthLoggedOutState(currentUser));
+    }
+
+  }
 
 
 
@@ -13,8 +25,7 @@ class LoginAuthCubit extends Cubit<LoginAuthState>{
 
 
   void login() async{
-    final GoogleSignIn _googleSignIn = GoogleSignIn();
-    final auth = FirebaseAuth.instance;
+
     emit(LoginAuthLoadingState());
 
     try{

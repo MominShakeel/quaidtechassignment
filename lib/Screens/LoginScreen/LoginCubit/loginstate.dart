@@ -6,6 +6,15 @@ class LoginAuthInitState extends LoginAuthState{
 
 }
 
+class LoginAuthLoggedInState extends LoginAuthState{
+final User? currentUser;
+LoginAuthLoggedInState(this. currentUser);
+}
+class LoginAuthLoggedOutState extends LoginAuthState{
+  final User? currentUser;
+  LoginAuthLoggedOutState(this. currentUser);
+}
+
 class LoginAuthLoadingState extends LoginAuthState{
 
 }
