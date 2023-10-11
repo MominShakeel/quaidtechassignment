@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home Screen'),),
+      appBar: AppBar(title: Text('Home Screen'),centerTitle: true,),
       body: BlocBuilder<PhotosCubit,PhotosState>(
         builder: (context,state) {
 
