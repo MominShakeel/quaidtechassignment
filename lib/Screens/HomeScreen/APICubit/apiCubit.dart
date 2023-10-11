@@ -6,7 +6,9 @@ import 'apiState.dart';
 
 class PhotosCubit extends Cubit<PhotosState>{
 
-  PhotosCubit():super(PhotosLoadingState());
+  PhotosCubit():super(PhotosLoadingState()){
+    fetchPhotos();
+  }
 
   PhotosRepository photosRepository = PhotosRepository();
 

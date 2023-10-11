@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quaidtech/Screens/HomeScreen/APICubit/apiCubit.dart';
+import 'package:quaidtech/Screens/HomeScreen/HomeUI/home.dart';
 
 import '../LoginScreen/LoginCubit/logincubit.dart';
 import '../LoginScreen/LoginUI/login.dart';
@@ -19,10 +21,10 @@ class SplashScreen extends StatelessWidget {
             Text('This is Splash Screen',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
             ElevatedButton(
               onPressed: (){
-                BlocProvider(
-                    create: (_)=>LoginAuthCubit(),
-
-                    child: LoginPage());
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>BlocProvider(
+                  create: (context)=>PhotosCubit(),
+                  child:  HomeScreen(),
+                )));
               },
               child: Text('Lets Start'),
             ),

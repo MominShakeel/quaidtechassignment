@@ -1,4 +1,6 @@
 
+import 'package:quaidtech/Screens/HomeScreen/APICubit/apiCubit.dart';
+
 import '../APIDate/Models/photosModel.dart';
 
 abstract class PhotosState{

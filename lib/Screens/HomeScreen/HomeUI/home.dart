@@ -42,10 +42,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
         PhotosModel photo = photos[index];
 
-        return ListTile(
+        return Container(
+          decoration: BoxDecoration(border: Border.all()),
+          child: ListTile(
+leading: Text(photo.id.toString()),
+            title: Text(photo.title.toString()),
+            subtitle: SizedBox(height: 100,child: Image.network(photo.url.toString()),),
 
-          title: Text(photo.title.toString()),
 
+          ),
         );
       },
 
