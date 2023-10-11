@@ -15,14 +15,12 @@ class LoginPage extends StatelessWidget {
   return Scaffold(
     appBar: AppBar(title: const Text('Login Page'),centerTitle: true,),
     body:
-      Container(
-        height: 600,
-
+      Center(
         child: BlocConsumer<LoginAuthCubit,LoginAuthState>(
             listener: (context,state){
           if(state is LoginAuthSuccessState){
 
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>BlocProvider(
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BlocProvider(
               create: (context)=>PhotosCubit(),
               child: const HomeScreen(),
             )));
@@ -36,8 +34,10 @@ class LoginPage extends StatelessWidget {
               }
               else {
                 return ElevatedButton(onPressed: () {
+                  if(state is LoginAuthInitState){
+                    context.read<LoginAuthCubit>().login();
+                  }
 
-                  state is LoginAuthLoadingState?null:()=>context.read<LoginAuthCubit>().login();
 
                 },
                     child:

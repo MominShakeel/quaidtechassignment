@@ -22,8 +22,8 @@ class SplashScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: (){
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>BlocProvider(
-                  create: (context)=>PhotosCubit(),
-                  child:  HomeScreen(),
+                  create: (context)=>LoginAuthCubit(),
+                  child:  LoginPage(),
                 )));
               },
               child: Text('Lets Start'),

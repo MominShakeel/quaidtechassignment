@@ -12,10 +12,7 @@ Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   try {
-    await Firebase.initializeApp(
-
-
-    );
+    await Firebase.initializeApp();
   }
   catch(e){
     print(e.toString());

@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "479954056084-pdk1t5fu8kb55e2e49echg8gm7jq54gc.apps.googleusercontent.com",
+          "client_id": "479954056084-2jmng6prn56cmfj8nh3e1kra8h8tmnkn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.quaidtech",
-            "certificate_hash": "53220e787028951bd29911a0bbae3c96e40abf24"
+            "certificate_hash": "6875fd5a1ba2023cb92dd3d78a0394a121f48ce0"
           }
         },
         {

@@ -7,10 +7,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 class LoginAuthCubit extends Cubit<LoginAuthState>{
   LoginAuthCubit():super(LoginAuthInitState());
 
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
-  final auth = FirebaseAuth.instance;
+
+
+
+
 
   void login() async{
+    final GoogleSignIn _googleSignIn = GoogleSignIn();
+    final auth = FirebaseAuth.instance;
     emit(LoginAuthLoadingState());
 
     try{
